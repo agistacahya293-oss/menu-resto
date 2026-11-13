@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fdfbf7;
+    color: #2d2d2d;
+    padding-bottom: 90px;
+}
+
+header {
+    background: linear-gradient(135deg, #b91c1c, #991b1b);
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+.customer-info {
+    max-width: 600px;
+    margin: 15px auto;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    display: flex;
+    gap: 12px;
+}
+
+.info-row {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info-row label {
+    font-size: 12px;
+    color: #555;
+}
+
+.info-row input {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.filter-bar {
+    max-width: 600px;
+    margin: 0 auto 15px;
+    padding: 0 15px;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: 1px solid #b91c1c;
+    background: white;
+    color: #b91c1c;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.filter-btn.active {
+    background: #b91c1c;
+    color: white;
+}
+
+.menu-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.menu-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.menu-card img {
+    width: 115px;
+    height: 125px;
+    object-fit: cover;
+}
+
+.menu-detail {
+    padding: 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-detail h3 {
+    font-size: 16px;
+    color: #1f2937;
+}
+
+.menu-detail p {
+    font-size: 12px;
+    color: #6b7280;
+    margin: 4px 0 8px;
+    line-height: 1.4;
+}
+
+.price-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.harga {
+    font-weight: bold;
+    color: #b91c1c;
+    font-size: 15px;
+}
+
+.qty-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f3f4f6;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
+.qty-control button {
+    width: 26px;
+    height: 26px;
+    border: none;
+    background: #b91c1c;
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.qty-control span {
+    font-weight: bold;
+    font-size: 14px;
+    min-width: 16px;
+    text-align: center;
+}
+
+.notes-section {
+    max-width: 600px;
+    margin: 20px auto 0;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.notes-section label {
+    font-size: 13px;
+    color: #444;
+}
+
+.notes-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 13px;
+    resize: none;
+}
+
+.checkout-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #1f2937;
+    color: white;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.15);
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+}
+
+.summary span {
+    font-size: 12px;
+    color: #d1d5db;
+}
+
+.summary strong {
+    font-size: 17px;
+    color: #fbbf24;
+}
+
+.btn-order {
+    background: #16a34a;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}

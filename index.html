@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resto Nusantara - Menu Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🍽️ Resto Nusantara</h1>
+        <p>Pesan Langsung dari Meja Anda dengan Cepat & Praktis</p>
+    </header>
+
+    <!-- Info Meja & Nama Pemesan -->
+    <section class="customer-info">
+        <div class="info-row">
+            <label for="nomor-meja"><strong>Nomor Meja:</strong></label>
+            <input type="text" id="nomor-meja" placeholder="Contoh: 05">
+        </div>
+        <div class="info-row">
+            <label for="nama-pemesan"><strong>Nama Pemesan:</strong></label>
+            <input type="text" id="nama-pemesan" placeholder="Masukkan nama Anda">
+        </div>
+    </section>
+
+    <!-- Tab Filter Kategori -->
+    <nav class="filter-bar">
+        <button class="filter-btn active" onclick="filterMenu('semua', this)">Semua</button>
+        <button class="filter-btn" onclick="filterMenu('makanan', this)">Makanan</button>
+        <button class="filter-btn" onclick="filterMenu('minuman', this)">Minuman</button>
+        <button class="filter-btn" onclick="filterMenu('camilan', this)">Camilan</button>
+    </nav>
+
+    <!-- Daftar Menu Restoran -->
+    <main class="menu-container" id="daftar-menu">
+        <!-- Menu 1 -->
+        <div class="menu-card" data-kategori="makanan">
+            <img src="https://unsplash.com" alt="Ayam Bakar Madu">
+            <div class="menu-detail">
+                <h3>Ayam Bakar Madu + Nasi</h3>
+                <p>Ayam bakar bumbu madu spesial lengkap dengan lalapan dan sambal terasi.</p>
+                <div class="price-action">
+                    <span class="harga">Rp 28.000</span>
+                    <div class="qty-control">
+                        <button onclick="ubahJumlah('Ayam Bakar Madu + Nasi', 28000, -1)">-</button>
+                        <span id="qty-Ayam Bakar Madu + Nasi">0</span>
+                        <button onclick="ubahJumlah('Ayam Bakar Madu + Nasi', 28000, 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu 2 -->
+        <div class="menu-card" data-kategori="makanan">
+            <img src="https://unsplash.com" alt="Nasi Goreng Spesial">
+            <div class="menu-detail">
+                <h3>Nasi Goreng Kampung</h3>
+                <p>Nasi goreng bumbu rempah tradisional dengan telur mata sapi dan kerupuk.</p>
+                <div class="price-action">
+                    <span class="harga">Rp 22.000</span>
+                    <div class="qty-control">
+                        <button onclick="ubahJumlah('Nasi Goreng Kampung', 22000, -1)">-</button>
+                        <span id="qty-Nasi Goreng Kampung">0</span>
+                        <button onclick="ubahJumlah('Nasi Goreng Kampung', 22000, 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu 3 -->
+        <div class="menu-card" data-kategori="camilan">
+            <img src="https://unsplash.com" alt="Tahu Crispy">
+            <div class="menu-detail">
+                <h3>Tahu Walik Crispy</h3>
+                <p>Tahu goreng renyah isi adonan ayam gurih disajikan dengan saus kecap pedas.</p>
+                <div class="price-action">
+                    <span class="harga">Rp 14.000</span>
+                    <div class="qty-control">
+                        <button onclick="ubahJumlah('Tahu Walik Crispy', 14000, -1)">-</button>
+                        <span id="qty-Tahu Walik Crispy">0</span>
+                        <button onclick="ubahJumlah('Tahu Walik Crispy', 14000, 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu 4 -->
+        <div class="menu-card" data-kategori="minuman">
+            <img src="https://unsplash.com" alt="Es Teh Lemon">
+            <div class="menu-detail">
+                <h3>Iced Lemon Tea</h3>
+                <p>Teh seduh segar dengan perasan jeruk lemon asli yang menyegarkan.</p>
+                <div class="price-action">
+                    <span class="harga">Rp 10.000</span>
+                    <div class="qty-control">
+                        <button onclick="ubahJumlah('Iced Lemon Tea', 10000, -1)">-</button>
+                        <span id="qty-Iced Lemon Tea">0</span>
+                        <button onclick="ubahJumlah('Iced Lemon Tea', 10000, 1)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Kolom Catatan Tambahan -->
+    <section class="notes-section">
+        <label for="catatan"><strong>Catatan Pesanan (Opsional):</strong></label>
+        <textarea id="catatan" rows="2" placeholder="Contoh: Nasi goreng tidak pedas, es batu sedikit..."></textarea>
+    </section>
+
+    <!-- Bar Checkout Melayang di Bawah -->
+    <div class="checkout-bar" id="checkout-bar" style="display: none;">
+        <div class="summary">
+            <span id="total-porsi">0 Porsi</span>
+            <strong id="total-bayar">Rp 0</strong>
+        </div>
+        <button class="btn-order" onclick="kirimPesananWA()">Kirim ke Kasir (WA) ➔</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
